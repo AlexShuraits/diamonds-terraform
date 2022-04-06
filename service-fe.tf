@@ -22,6 +22,6 @@ module "fe" {
   readiness_probe_path = "/"
   envs = {
     NEXT_PUBLIC_REACT_APP_ENV = "dev"
-    NEXT_PUBLIC_API_HOST = "https://mashina.${var.domain}"
+    NEXT_PUBLIC_API_HOST = "https://api.${var.domain}"
   }
 }

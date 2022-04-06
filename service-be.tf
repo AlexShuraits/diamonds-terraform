@@ -21,7 +21,7 @@ module "be" {
   probes_disabled = true
   envs = {
     API_PORT = 3000
-    APP_HOST = "mashina.${var.domain}"
+    APP_HOST = "https://mashina.${var.domain}"
     DB_HOST = "${kubernetes_service.mysql.metadata.0.name}.default.svc.cluster.local"
     DB_NAME = mysql_database.be.name
     DB_USERNAME = mysql_user.be.user
