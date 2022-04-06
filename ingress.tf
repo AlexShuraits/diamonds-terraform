@@ -30,7 +30,7 @@ resource "tls_cert_request" "this" {
   private_key_pem = tls_private_key.this.private_key_pem
   subject {
     common_name  = local.project_name
-    organization = data.google_organization.this.domain
+    organization = "Diamonds"
   }
 }
 

@@ -77,5 +77,5 @@ provider "mysql" {
 provider "circleci" {
   api_token    = data.google_secret_manager_secret_version.this["circleci_token"].secret_data
   vcs_type     = "github"
-  organization = "logiqlabs"
+  organization = "AlexShuraits"
 }

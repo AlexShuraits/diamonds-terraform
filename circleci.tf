@@ -21,7 +21,7 @@ resource "google_project_iam_binding" "circleci" {
   ]
 }
 
-resource "circleci_context_environment_variable" "devops_common" {
+resource "circleci_context_environment_variable" "common" {
   for_each = {
     GCP_SERVICE_ACCOUNT_KEY = google_service_account_key.circleci.private_key
     GCP_PROJECT_ID = data.google_project.this.project_id
