@@ -31,7 +31,7 @@ resource "circleci_context_environment_variable" "common" {
     DOCKER_REGISTRY_AUTH = "gcloud auth configure-docker"
     EXECUTOR_IMAGE = "google/cloud-sdk:latest"
     PROXY_URL = "socks5://${random_string.go-socks5-proxy-user.result}:${random_string.go-socks5-proxy-user.result}@${cloudflare_record.go-socks5-proxy.hostname}:${local.go-socks5-proxy-port}"
-    API_HOST = "https://mashina.${var.domain}"
+    API_HOST = "https://api.${var.domain}"
   }
   context_id = circleci_context.common.id
     variable = each.key
