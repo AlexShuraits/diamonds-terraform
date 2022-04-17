@@ -114,10 +114,10 @@ resource "google_container_node_pool" "main" {
   location           = data.google_client_config.this.zone
   initial_node_count = 1
 
-  autoscaling {
-    max_node_count = 2
-    min_node_count = 1
-  }
+#  autoscaling {
+#    max_node_count = 1
+#    min_node_count = 1
+#  }
 
   management {
     auto_repair  = true
