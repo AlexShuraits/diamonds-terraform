@@ -8,7 +8,7 @@ resource "google_sql_database_instance" "mysql" {
       ipv4_enabled = true
       private_network = module.vpc.network_self_link
       dynamic "authorized_networks" {
-        for_each = var.authorized_ips
+        for_each = concat(var.authorized_ips, var.mysql_authorized_ips)
         content {
           value = authorized_networks.value.cidr_block
           name = authorized_networks.value.display_name

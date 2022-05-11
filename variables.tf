@@ -11,6 +11,19 @@ variable "authorized_ips" {
   ]
 }
 
+variable "mysql_authorized_ips" {
+  default = [
+    {
+      display_name = "OpenVPN"
+      cidr_block   = "178.62.205.237/32"
+    },
+    {
+      display_name = "Diamonds BI"
+      cidr_block   = "34.77.212.185/32"
+    }
+  ]
+}
+
 variable "domain" {
   default = "diamondslg.com"
 }
